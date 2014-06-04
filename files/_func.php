@@ -1,7 +1,6 @@
 <?php
 	error_reporting(E_ALL ^ E_NOTICE);													// Stop error messages
 	
-<<<<<<< HEAD
 	if ( isset( $_COOKIE['ID'] ) ){														// Renew cookies on each page visit
 		setcookie( "ID", $_COOKIE['ID'], time() + 3600 );
 		setcookie( "PP", $_COOKIE['PP'], time() + 3600 );
@@ -9,17 +8,10 @@
 		setcookie( "TP", $_COOKIE['TP'], time() + 3600 );
 	}
 	
-	function O18 (){																	// Check to see whether user is 18+
-		if( !isset( $_COOKIE['18'] ) ){													// Cookie isn't set to say that visitor is over 18.
-			echo "	<script>
-						window.location = '18+.php';
-					</script>";
-=======
 	function O18 (){
 		// Check to see whether user is 18+
 		if( !isset( $_COOKIE['18'] ) ){
 			header("Location: /18+.php");
->>>>>>> 9d38a4955805d4279cfb1df5e3de8f52f96b9dd3
 		}
 	}
 	
@@ -111,13 +103,7 @@
 			setcookie( "TP", $TP, time()+3600 );
 			setcookie( "PP", $PP, time()+3600 );
 			setcookie( "RP", $TP, time()+3600 );
-<<<<<<< HEAD
-			echo "		<script>";
-			echo "			window.location = 'index.php';";							// Go to home page
-			echo "		</script>";
-=======
 			header("Location: /index.php");
->>>>>>> 9d38a4955805d4279cfb1df5e3de8f52f96b9dd3
 		}
 		else {																			// Incorrect PW
 			echo "Incorrect password";
@@ -207,8 +193,13 @@
 		$sessions = [ 	'base.html',
 						'advance.html' ];
 		$ses = rand( 0, sizeof( $sessions ) - 1 );
-<<<<<<< HEAD
 		echo file_get_contents ( "res/ses/".$sessions[ $ses ] );
+		$res_ses_file = "res/ses/".$sessions[ $ses ];
+		if(file_exists($res_ses_file)){
+			echo file_get_contents ( "res/ses/".$sessions[ $ses ] );
+		}else{
+			echo 'error: failed to get res ses file';
+		}
 	}
 	function addPointsPun ( $pun, $complete ){
 		$db = DBCon();
@@ -280,12 +271,3 @@
 					window.location = 'details.php';
 				</script>";
 	}
-=======
-		$res_ses_file = "res/ses/".$sessions[ $ses ];
-		if(file_exists($res_ses_file)){
-			echo file_get_contents ( "res/ses/".$sessions[ $ses ] );
-		}else{
-			echo 'error: failed to get res ses file';
-		}
-	}
->>>>>>> 9d38a4955805d4279cfb1df5e3de8f52f96b9dd3
