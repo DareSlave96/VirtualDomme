@@ -249,9 +249,9 @@
 		if ( $complete ==  1 ) {														// If task not completed (false)
 			$pnts = $pnts - ( 3 * $pnts );												// Twice the number of points will be added instead of taken away 
 		}
-		$st = $db -> prepare("UPDATE `Details` SET `TasPnt` = `TasPnt` - $pnt WHERE `UN` = :ID" );
-		$st -> bindparam( ':point', $pnts );
+		$st = $db -> prepare("UPDATE `Details` SET `TasPnt` = `TasPnt` - :pnt WHERE `UN` = :ID" );
 		$st -> bindparam( ':ID', $_COOKIE['ID']);
+		$st -> bindparam( ':pnt', $pnts);
 		$st -> execute();
 		setcookie( 'TP', $_COOKIE['TP'] - $pnts, time()+3600 );
 		header('Location: tasks.php');
