@@ -1,0 +1,70 @@
+<style>
+	table {
+		margin: 0px auto;
+	}
+	td {
+		width: 800px;
+		text-align: center;
+	}
+	button {
+		width: 100px;
+	}
+</style>
+
+<table>
+	<tr>
+		<td id="TOP">
+			123
+		</td>
+	</tr>
+	<tr>
+		<td id="BTM">
+			789
+		</td> 
+	</tr>
+</table>
+
+<script>
+	var Top = document.getElementById('TOP');
+	var Btm = document.getElementById('BTM');
+	var domina = "Mistress";
+	
+	// Male/female sub
+	function MaleSub (){
+		var sub = "M";
+		a();
+	}
+	function FemaleS (){
+		var sub = "F";
+		a();
+	}
+	// Male/Female Dom
+	function MaleDom (){
+		var domina = "Master";
+		b();
+	}
+	function FemaleD (){
+		var domina = "Mistress";
+		b();
+	}
+	// Starting function
+	function start (){
+		Top.innerHTML = "Hello, are you male or female?";
+		Btm.innerHTML = "<button onClick='FemaleS()'>Female</button><button onClick='MaleSub()'>Male</button>";
+	}
+	function a (){
+		Top.innerHTML = "Do you want a male or female dominant?";
+		Btm.innerHTML = "<button onClick='FemaleD()'>Female</button><button onClick='MaleDom()'>Male</button>";
+	}
+	function b (){
+		Top.innerHTML = "Please get naked if you aren't already. You want to please your " + domina + ", don't you?";
+		Btm.innerHTML = "";
+	}
+	
+	start();
+	
+</script>
+
+<noscript>
+	Please enable JavaScript as this is what these sessions use
+</noscript>

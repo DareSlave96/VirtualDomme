@@ -1,0 +1,70 @@
+html {
+	background-color: white;
+}
+body {
+	text-align: center;
+	background-color: black;
+	width: 900px;
+	margin: 0px auto;
+	padding: 5px;
+}
+div {
+	background-color: white;
+	border-radius: 10px;
+	padding: 10px;
+}
+div#menu {
+	position: absolute;
+	top: 115px;
+	width: 100px;
+	height: 125px;
+}
+div#head2 {
+	position: absolute;
+	top: 115px;
+	margin-left: 130px;
+	width: 750px;
+	height: 125px;
+}
+div#pun {
+	padding: 0px;
+	background-color: black;
+	color: white;
+	width: 200px;
+	margin-left: 25px;
+	position: absolute;
+}
+div#rew {
+	padding: 0px;
+	background-color: black;
+	color: white;
+	width: 200px;
+	margin-left: 275px;
+	position: absolute;
+}
+div#tas {
+	padding: 0px;
+	background-color: black;
+	color: white;
+	width: 200px;
+	margin-left: 525px;
+	position: absolute;
+}
+div#Quote {
+	padding: 0px;
+	position: absolute;
+	width: 750px;
+	top: 60px;
+}
+div#body {
+	position: absolute;
+	top: 275px;
+	width: 880px;
+	margin-left:0px;
+}
+.qte {
+	font-size: 25px;
+}
+.big {
+	font-size: 30px;
+}

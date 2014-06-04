@@ -1,0 +1,36 @@
+Users
+				UN				PW					Date			Group
+				Username		Encrypted pass		Last Login		User group
+Punishments		
+				ID				Date				Author			Pun			Points
+				
+Rewards
+				ID				Date				Author			Rew			Points
+				
+Tasks		
+				ID				Date				Author			Tas			Points
+
+Quotes
+				ID				Quote				Author
+
+Details
+				UN				RewPnt				PunPnt			TasPnt		'etc.'
+
+News
+				ID				Date				Story
+
+
+				
+PM	
+				Sender			Recipient			Date			Message					Read				Del1					Del2
+																												Sender Deleted message	Recipient Deleted message
+																												
+																												
+																												
+																												
+User groups
+01:	Standard
+04: Moderator
+07:	Staff
+09: Trusted Staff
+10:	Admin
