@@ -1,6 +1,10 @@
 <?php
 	include_once('_func.php');	
 	O18();
+	
+	if ( $_GET['ID'] ){
+		addPointsRew ( $_GET['ID'], $_GET['comp'] );
+	}
 ?>
 <html>
 	<head>

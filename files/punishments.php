@@ -1,6 +1,10 @@
 <?php
 	include_once('_func.php');	
 	O18();
+	
+	if ( $_GET['ID'] ){
+		addPointsPun ( $_GET['ID'], $_GET['Comp'] );
+	}
 ?>
 <html>
 	<head>
