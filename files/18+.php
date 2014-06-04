@@ -3,6 +3,7 @@
 	$do = $_GET['do'];
 	if ( $do === "agree" ){
 		setcookie ( "18", " ", time() + 60*60*24*14 ); // 14 Day cookie
+		header('Location: index.php');
 	}
 ?>
 <html>

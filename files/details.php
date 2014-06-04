@@ -8,6 +8,9 @@
 	else if ( $do === "si" ) {
 		Signin();
 	}
+	else if ( $do === "lo" ) {
+		Logout();
+	}
 ?>
 <html>
 	<head>

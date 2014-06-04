@@ -1,7 +1,7 @@
 <?php
 	error_reporting(E_ALL ^ E_NOTICE);													// Stop error messages
 	
-	if ( isset( $_COOKIE['ID'] ) ){														// Renew cookies on each page visit
+	if ( isset( $_COOKIE['ID'] ) && $_GET['do'] != "lo" ){														// Renew cookies on each page visit
 		setcookie( "ID", $_COOKIE['ID'], time() + 3600 );
 		setcookie( "PP", $_COOKIE['PP'], time() + 3600 );
 		setcookie( "RP", $_COOKIE['RP'], time() + 3600 );
@@ -217,7 +217,7 @@
 		$st -> bindparam( ':ID', $_COOKIE['ID']);
 		$st -> execute();
 		setcookie( 'PP', $_COOKIE['PP'] - $pnts, time()+3600 );
-		Header('Location: punishments.php');
+		header('Location: punishments.php');
 	}
 	function addPointsRew ( $rew, $complete ){
 		echo $rew;
@@ -236,7 +236,7 @@
 			$st -> execute();
 			setcookie( "RP", $_COOKIE['RP'] - $pnt , time() + 3600 );
 		}
-		Header('Location: rewards.php');
+		header('Location: rewards.php');
 	}
 	function addPointsTas ( $pun, $complete ){
 		$db = DBCon();
@@ -254,14 +254,12 @@
 		$st -> bindparam( ':ID', $_COOKIE['ID']);
 		$st -> execute();
 		setcookie( 'TP', $_COOKIE['TP'] - $pnts, time()+3600 );
-		Header('Location: tasks.php');
+		header('Location: tasks.php');
 	}
 	function Logout (){
 		setcookie( "ID", $_COOKIE['ID'], time() - 3600 );
 		setcookie( "PP", $_COOKIE['PP'], time() - 3600 );
 		setcookie( "RP", $_COOKIE['RP'], time() - 3600 );
 		setcookie( "TP", $_COOKIE['TP'], time() - 3600 );
-		echo "	<script>
-					window.location = 'details.php';
-				</script>";
+		header('Location: index.php');
 	}
