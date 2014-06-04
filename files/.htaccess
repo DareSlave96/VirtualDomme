@@ -1,0 +1,11 @@
+RewriteEngine on
+RewriteBase /
+
+# 404
+ErrorDocument 404 /404.html 
+ErrorDocument 403 /404.html 
+
+# ASSETS (disabled... is optional)
+# RewriteRule ^img/(.*) /assets/img/$1 [L]
+# RewriteRule ^js/(.*) /assets/js/$1 [L]
+# RewriteRule ^css/(.*) /assets/css/$1 [L]
