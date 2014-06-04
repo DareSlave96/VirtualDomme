@@ -5,9 +5,7 @@
 	function O18 (){
 		// Check to see whether user is 18+
 		if( !isset( $_COOKIE['18'] ) ){
-			echo "	<script>
-						window.location = '18+.php';
-					</script>";
+			header("Location: /18+.php");
 		}
 	}
 	
@@ -100,9 +98,7 @@
 			setcookie( "TP", $TP, time()+3600 );
 			setcookie( "PP", $PP, time()+3600 );
 			setcookie( "RP", $TP, time()+3600 );
-			echo "		<script>
-							window.location = 'index.php';
-						</script>";
+			header("Location: /index.php");
 		}
 		else {
 			// Incorrect PW
@@ -195,5 +191,10 @@
 		$sessions = [ 	'base.html',
 						'advance.html' ];
 		$ses = rand( 0, sizeof( $sessions ) - 1 );
-		echo file_get_contents ( "res/ses/".$sessions[ $ses ] );
+		$res_ses_file = "res/ses/".$sessions[ $ses ];
+		if(file_exists($res_ses_file)){
+			echo file_get_contents ( "res/ses/".$sessions[ $ses ] );
+		}else{
+			echo 'error: failed to get res ses file';
+		}
 	}
