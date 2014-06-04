@@ -11,7 +11,7 @@
 	function O18 (){
 		// Check to see whether user is 18+
 		if( !isset( $_COOKIE['18'] ) ){
-			header("Location: /18+.php");
+			header("Location: 18+.php");
 		}
 	}
 	
@@ -103,7 +103,7 @@
 			setcookie( "TP", $TP, time()+3600 );
 			setcookie( "PP", $PP, time()+3600 );
 			setcookie( "RP", $TP, time()+3600 );
-			header("Location: /index.php");
+			header("Location: index.php");
 		}
 		else {																			// Incorrect PW
 			echo "Incorrect password";
@@ -217,9 +217,7 @@
 		$st -> bindparam( ':ID', $_COOKIE['ID']);
 		$st -> execute();
 		setcookie( 'PP', $_COOKIE['PP'] - $pnts, time()+3600 );
-		echo "	<script>
-					window.location = 'punishments.php';
-				</script>";
+		Header('Location: punishments.php');
 	}
 	function addPointsRew ( $rew, $complete ){
 		echo $rew;
@@ -238,9 +236,7 @@
 			$st -> execute();
 			setcookie( "RP", $_COOKIE['RP'] - $pnt , time() + 3600 );
 		}
-		echo "	<script>
-					window.location = 'rewards.php';
-				</script>"; 
+		Header('Location: rewards.php');
 	}
 	function addPointsTas ( $pun, $complete ){
 		$db = DBCon();
@@ -258,9 +254,7 @@
 		$st -> bindparam( ':ID', $_COOKIE['ID']);
 		$st -> execute();
 		setcookie( 'TP', $_COOKIE['TP'] - $pnts, time()+3600 );
-		echo "	<script>
-					window.location = 'tasks.php';
-				</script>";
+		Header('Location: tasks.php');
 	}
 	function Logout (){
 		setcookie( "ID", $_COOKIE['ID'], time() - 3600 );
