@@ -10,7 +10,7 @@
 function load2div(target,div,get){
 	$.ajax({
 		type: "GET",
-		url: "/ajax/"+target+".php"+get,
+		url: target+".php"+get,
 		timeout: 25000,
 		cache: true,
 		async: false,
