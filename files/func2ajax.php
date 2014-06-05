@@ -13,6 +13,6 @@ require_once('_func.php');
 
 
 if($fid == "1"){
-  echo GetQuote();
+  echo quote::fetch();
 }
 ?>
