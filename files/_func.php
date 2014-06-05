@@ -238,7 +238,7 @@
 		}
 		header('Location: rewards.php');
 	}
-	function addPointsTas ( $pun, $complete ){
+	function addPointsTas ( $tas, $complete ){
 		$db = DBCon();
 		$st = $db -> prepare("SELECT * FROM `Tasks` WHERE `ID` = :ID ");
 		$st -> bindparam( ':ID', $tas );
