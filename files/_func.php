@@ -1,5 +1,5 @@
 <?php
-	//error_reporting(E_ALL ^ E_NOTICE);													// Stop error messages
+	error_reporting(E_ALL ^ E_NOTICE);													// Stop error messages
 	
 	if ( isset( $_COOKIE['ID'] ) && $_GET['do'] != "lo" ){														// Renew cookies on each page visit
 		setcookie( "ID", $_COOKIE['ID'], time() + 3600 );
@@ -196,11 +196,21 @@
 		}
 		// Add a punishment (Not used)
 		public static function add (){
-		
+			if ( isset ( $_COOKIE['ID'] ) ){
+				$UN = $_COOKIE['ID'];
+			}
+			else {
+				$UN = "Anon";
+			}
+			$db = DBCon();
+			$st = $db -> prepare("INSERT INTO `Punishments` ( `Author`, `Pun`, `Points` ) VALUES ( :UN, :Pun, :Pnt )");
+			$st -> bindparam( ':UN', $UN );
+			$st -> bindparam( ':Pun', $_POST['Pun'] );
+			$st -> bindparam( ':Pnt', $_POST['Points'] );
 		}
 		// Delete a punishment (Not used)
 		public static function delete (){
-		
+			return;
 		}
 	}
 	// Reward stuff
@@ -254,7 +264,17 @@
 		}
 		// Add a reward (Not used)
 		public static function add (){
-		
+			if ( isset ( $_COOKIE['ID'] ) ){
+				$UN = $_COOKIE['ID'];
+			}
+			else {
+				$UN = "Anon";
+			}
+			$db = DBCon();
+			$st = $db -> prepare("INSERT INTO `Rewards` ( `Author`, `Rew`, `Points` ) VALUES ( :UN, :Rew, :Pnt )");
+			$st -> bindparam( ':UN', $UN );
+			$st -> bindparam( ':Rew', $_POST['Rew'] );
+			$st -> bindparam( ':Pnt', $_POST['Points'] );
 		}
 		// Delete a reward (Not used)
 		public static function delete (){
@@ -314,7 +334,17 @@
 		}
 		// Add a task (Not used)
 		public static function add (){
-		
+			if ( isset ( $_COOKIE['ID'] ) ){
+				$UN = $_COOKIE['ID'];
+			}
+			else {
+				$UN = "Anon";
+			}
+			$db = DBCon();
+			$st = $db -> prepare("INSERT INTO `Tasks` ( `Author`, `Tas`, `Points` ) VALUES ( :UN, :Tas, :Pnt )");
+			$st -> bindparam( ':UN', $UN );
+			$st -> bindparam( ':Tas', $_POST['Tas'] );
+			$st -> bindparam( ':Pnt', $_POST['Points'] );
 		}
 		// Delete a task (Not used)
 		public static function delete (){
