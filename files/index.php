@@ -15,8 +15,15 @@ re: yep, just messes up css atm, so ill leave it commented out for now :)
 		<title>
 			Home - Virtual Dom(me)
 		</title>
-		<script type="text/javascript" src="jquery.js"></script>
-		<script type="text/javascript" src="main_ajax.js"></script>
+		
+		<script type="text/javascript" src="/js/jquery.js"></script>
+		<script type="text/javascript" src="/js/jquery_setup.js"></script>
+	        <script type="text/javascript" src="/js/pages.js"></script>
+	        <script type="text/javascript" src="/js/main.js"></script>
+	        <script type="text/javascript" src="js/jquery_ui.js"></script>
+	        <link rel="stylesheet" type="text/css" href="/css/jquery_ui.css">
+	        <link rel="stylesheet" type="text/css" href="/css/main.css">
+			
 	</head>
 	<body>
 		<div id="head">
