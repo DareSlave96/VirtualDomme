@@ -1,5 +1,5 @@
 <?php
-	error_reporting(E_ALL ^ E_NOTICE);													// Stop error messages
+	//error_reporting(E_ALL ^ E_NOTICE);													// Stop error messages
 	
 	if ( isset( $_COOKIE['ID'] ) && $_GET['do'] != "lo" ){														// Renew cookies on each page visit
 		setcookie( "ID", $_COOKIE['ID'], time() + 3600 );
@@ -81,6 +81,12 @@
 				$st -> bindparam( ':PW', $PW );
 				$st -> execute();
 				$st = $db -> prepare("INSERT INTO `Details` ( `UN` ) VALUES ( :UN )");
+				$st -> bindparam ( ':UN', $UN );
+				$st -> execute();
+				$st = $db -> prepare("INSERT INTO `Details2` ( `UN` ) VALUES ( :UN )");
+				$st -> bindparam ( ':UN', $UN );
+				$st -> execute();
+				$st = $db -> prepare("INSERT INTO `Details3` ( `UN` ) VALUES ( :UN )");
 				$st -> bindparam ( ':UN', $UN );
 				$st -> execute();
 			}
@@ -335,52 +341,200 @@
 		
 		}
 	}
-	// Class to find out limits for sessions. (Returns true if a limit and false if not)
-	// (Not used)
+	// Class to find out limits for sessions. (Returns 1 if a limit, 2 if a dislike and 3 if a like)
+	// (Not used for the moment)
 	class limit {
 		// Piss
 		public static function piss (){
-			return true;
+			if( isset( $_COOKIE['ID'] ) ){
+				echo "Cookie set";
+				$db = DBCon();
+				$st = $db -> prepare("SELECT `Piss` FROM `Details2` WHERE `UN` = :UN");
+				$st -> bindparam( ':UN', $_COOKIE['ID'] );
+				$st -> execute();
+				foreach ( $st as $row ){
+					return $row['Piss'];
+				}
+			}
+			else {
+				return false;
+			}
 		}
 		// Scat
 		public static function scat (){
-			return true;
+			if( isset( $_COOKIE['ID'] ) ){
+				echo "Cookie set";
+				$db = DBCon();
+				$st = $db -> prepare("SELECT `Scat` FROM `Details2` WHERE `UN` = :UN");
+				$st -> bindparam( ':UN', $_COOKIE['ID'] );
+				$st -> execute();
+				foreach ( $st as $row ){
+					return $row['Scat'];
+				}
+			}
+			else {
+				return false;
+			}
 		}
 		// Blood
 		public static function blood (){
-			return true;
+			if( isset( $_COOKIE['ID'] ) ){
+				echo "Cookie set";
+				$db = DBCon();
+				$st = $db -> prepare("SELECT `Blood` FROM `Details2` WHERE `UN` = :UN");
+				$st -> bindparam( ':UN', $_COOKIE['ID'] );
+				$st -> execute();
+				foreach ( $st as $row ){
+					return $row['Blood'];
+				}
+			}
+			else {
+				return false;
+			}
 		}
-		// Public
-		public static function publick (){
-			return true;
+		// Obvious Public
+		public static function oPublic (){
+			if( isset( $_COOKIE['ID'] ) ){
+				echo "Cookie set";
+				$db = DBCon();
+				$st = $db -> prepare("SELECT `oPublic` FROM `Details2` WHERE `UN` = :UN");
+				$st -> bindparam( ':UN', $_COOKIE['ID'] );
+				$st -> execute();
+				foreach ( $st as $row ){
+					return $row['oPublic'];
+				}
+			}
+			else {
+				return false;
+			}
+		}
+		// Hidden Public
+		public static function hPublic (){
+			if( isset( $_COOKIE['ID'] ) ){
+				echo "Cookie set";
+				$db = DBCon();
+				$st = $db -> prepare("SELECT `hPublic` FROM `Details2` WHERE `UN` = :UN");
+				$st -> bindparam( ':UN', $_COOKIE['ID'] );
+				$st -> execute();
+				foreach ( $st as $row ){
+					return $row['hPublic'];
+				}
+			}
+			else {
+				return false;
+			}
 		}
 		// Humiliation
 		public static function humiliation (){
-			return true;
+			if( isset( $_COOKIE['ID'] ) ){
+				echo "Cookie set";
+				$db = DBCon();
+				$st = $db -> prepare("SELECT `Humiliation` FROM `Details2` WHERE `UN` = :UN");
+				$st -> bindparam( ':UN', $_COOKIE['ID'] );
+				$st -> execute();
+				foreach ( $st as $row ){
+					return $row['Humiliation'];
+				}
+			}
+			else {
+				return false;
+			}
 		}
 		// Chastity
 		public static function chastity (){
-			return true;
+			if( isset( $_COOKIE['ID'] ) ){
+				echo "Cookie set";
+				$db = DBCon();
+				$st = $db -> prepare("SELECT `Chastity` FROM `Details2` WHERE `UN` = :UN");
+				$st -> bindparam( ':UN', $_COOKIE['ID'] );
+				$st -> execute();
+				foreach ( $st as $row ){
+					return $row['Chastity'];
+				}
+			}
+			else {
+				return false;
+			}
 		}
 		// Cum eating
 		public static function cEat (){
-			return true;
+			if( isset( $_COOKIE['ID'] ) ){
+				echo "Cookie set";
+				$db = DBCon();
+				$st = $db -> prepare("SELECT `cEating` FROM `Details2` WHERE `UN` = :UN");
+				$st -> bindparam( ':UN', $_COOKIE['ID'] );
+				$st -> execute();
+				foreach ( $st as $row ){
+					return $row['cEating'];
+				}
+			}
+			else {
+				return false;
+			}
 		}
 		// Anal
 		public static function anal (){
-			return true;
+			if( isset( $_COOKIE['ID'] ) ){
+				echo "Cookie set";
+				$db = DBCon();
+				$st = $db -> prepare("SELECT `Anal` FROM `Details2` WHERE `UN` = :UN");
+				$st -> bindparam( ':UN', $_COOKIE['ID'] );
+				$st -> execute();
+				foreach ( $st as $row ){
+					return $row['Anal'];
+				}
+			}
+			else {
+				return false;
+			}
 		}
 		// Feminisation
 		public static function femme (){
-			return true;
+			if( isset( $_COOKIE['ID'] ) ){
+				echo "Cookie set";
+				$db = DBCon();
+				$st = $db -> prepare("SELECT `Feminisation` FROM `Details2` WHERE `UN` = :UN");
+				$st -> bindparam( ':UN', $_COOKIE['ID'] );
+				$st -> execute();
+				foreach ( $st as $row ){
+					return $row['Feminisation'];
+				}
+			}
+			else {
+				return false;
+			}
 		}
 		// Cross-dressing
 		public static function xDress (){
-			return true;
+			if( isset( $_COOKIE['ID'] ) ){
+				echo "Cookie set";
+				$db = DBCon();
+				$st = $db -> prepare("SELECT `xDressing` FROM `Details2` WHERE `UN` = :UN");
+				$st -> bindparam( ':UN', $_COOKIE['ID'] );
+				$st -> execute();
+				foreach ( $st as $row ){
+					return $row['xDressing'];
+				}
+			}
+			else {
+				return false;
+			}
 		}
 		// Post orgasm torment
 		public static function POT (){
-			return true;
+			if( isset( $_COOKIE['ID'] ) ){
+				echo "Cookie set";
+				$db = DBCon();
+				$st = $db -> prepare("SELECT `POT` FROM `Details2` WHERE `UN` = :UN");
+				$st -> bindparam( ':UN', $_COOKIE['ID'] );
+				$st -> execute();
+				foreach ( $st as $row ){
+					return $row['POT'];
+				}
+			}
+			else {
+				return false;
+			}
 		}
 	}
 	// PM-y stuff
