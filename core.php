@@ -17,6 +17,9 @@ if(empty($_SERVER['DOCUMENT_ROOT'])){
 define('ROOT', $_SERVER["DOCUMENT_ROOT"] . DS);   
 define('RES' , ROOT . 'res' . DS);
 define('SES', ROOT . 'res' . DS . 'ses' . DS);
+define('FILES', ROOT . 'files' . DS);
+
+define('WEBROOT', DS);
 
 define('LIB', ROOT); // LIB = library (the place the classes are stored... currently set to root)
 // this is used in the autoloader and might be used in other scripts
