@@ -6,9 +6,13 @@
 <!-- this doctype screws up the layout.. but it needs a doctype
 css works correctly under html 2.0 and 3.2 but this is not the right doctype to use (due to limmitations and that its outdated)
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+When i have a little more time i will make a new layout for the VM, with java sliders and a cool menu.
+(will put this in a seperate file so you can keep working on this one till the other on is finished.. and then 
+if you want we can replace it)
 -->
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> -->
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
