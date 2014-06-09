@@ -2,6 +2,12 @@
 	include_once('_func.php');	
 	O18();
 ?>
+
+<!-- this doctype screws up the layout.. but it needs a doctype
+css works correctly under html 2.0 and 3.2 but this is not the right doctype to use (due to limmitations and that its outdated)
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+-->
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
