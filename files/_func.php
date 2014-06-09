@@ -58,7 +58,7 @@
 			setcookie( "ID", $UN, time()+3600 );										// Save cookies with details
 			setcookie( "TP", $TP, time()+3600 );
 			setcookie( "PP", $PP, time()+3600 );
-			setcookie( "RP", $TP, time()+3600 );
+			setcookie( "RP", $RP, time()+3600 );
 			header("Location: index.php");
 		}
 		else {																			// Incorrect PW
@@ -368,7 +368,7 @@
 		}
 		// Add qoute (Not used)
 		public static function add (){
-		
+			
 		}
 	}
 	// Class to find out limits for sessions. (Returns 1 if a limit, 2 if a dislike and 3 if a like)
