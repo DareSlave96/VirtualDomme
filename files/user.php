@@ -6,6 +6,7 @@
 	$do = $_GET['do'];
 	if ( $do == "limits" ){
 		// Set limits
+		user::limits();
 	}
 	else if ( $do == "items" ){
 		// Set items
@@ -67,13 +68,13 @@
 								Anal
 							</td>
 							<td class="Limit">
-								<input type="radio" name="Anal" value="1">
+								<input type="radio" name="Anal" value=1>
 							</td>
 							<td class="Dislike">
-								<input type="radio" name="Anal" value="2">
+								<input type="radio" name="Anal" value=2>
 							</td>
 							<td class="Like">
-								<input type="radio" name="Anal" value="3">
+								<input type="radio" name="Anal" value=3>
 							</td>
 						</tr>
 						<tr>
@@ -81,13 +82,13 @@
 								Piss
 							</td>
 							<td class="Limit">
-								<input type="radio" name="Piss" value="1">
+								<input type="radio" name="Piss" value=1>
 							</td>
 							<td class="Dislike">
-								<input type="radio" name="Piss" value="2">
+								<input type="radio" name="Piss" value=2>
 							</td>
 							<td class="Like">
-								<input type="radio" name="Piss" value="3">
+								<input type="radio" name="Piss" value=3>
 							</td>
 						</tr>
 						<tr>
@@ -95,13 +96,13 @@
 								Scat
 							</td>
 							<td class="Limit">
-								<input type="radio" name="Scat" value="1">
+								<input type="radio" name="Scat" value=1>
 							</td>
 							<td class="Dislike">
-								<input type="radio" name="Scat" value="2">
+								<input type="radio" name="Scat" value=2>
 							</td>
 							<td class="Like">
-								<input type="radio" name="Scat" value="3">
+								<input type="radio" name="Scat" value=3>
 							</td>
 						</tr>
 						<tr>
@@ -109,13 +110,13 @@
 								Blood
 							</td>
 							<td class="Limit">
-								<input type="radio" name="Blood" value="1">
+								<input type="radio" name="Blood" value=1>
 							</td>
 							<td class="Dislike">
-								<input type="radio" name="Blood" value="2">
+								<input type="radio" name="Blood" value=2>
 							</td>
 							<td class="Like">
-								<input type="radio" name="Blood" value="3">
+								<input type="radio" name="Blood" value=3>
 							</td>
 						</tr>
 						<tr>
@@ -123,13 +124,13 @@
 								Obvious public
 							</td>
 							<td class="Limit">
-								<input type="radio" name="oPub" value="1">
+								<input type="radio" name="oPub" value=1>
 							</td>
 							<td class="Dislike">
-								<input type="radio" name="oPub" value="2">
+								<input type="radio" name="oPub" value=2>
 							</td>
 							<td class="Like">
-								<input type="radio" name="oPub" value="3">
+								<input type="radio" name="oPub" value=3>
 							</td>
 						</tr>
 						<tr>
@@ -137,13 +138,13 @@
 								Hidden Public
 							</td>
 							<td class="Limit">
-								<input type="radio" name="hPub" value="1">
+								<input type="radio" name="hPub" value=1>
 							</td>
 							<td class="Dislike">
-								<input type="radio" name="hPub" value="2">
+								<input type="radio" name="hPub" value=2>
 							</td>
 							<td class="Like">
-								<input type="radio" name="hPub" value="3">
+								<input type="radio" name="hPub" value=3>
 							</td>
 						</tr>
 						<tr>
@@ -151,13 +152,13 @@
 								Humiliation
 							</td>
 							<td class="Limit">
-								<input type="radio" name="Humil" value="1">
+								<input type="radio" name="Humil" value=1>
 							</td>
 							<td class="Dislike">
-								<input type="radio" name="Humil" value="2">
+								<input type="radio" name="Humil" value=2>
 							</td>
 							<td class="Like">
-								<input type="radio" name="Humil" value="3">
+								<input type="radio" name="Humil" value=3>
 							</td>
 						</tr>
 						<tr>
@@ -165,13 +166,13 @@
 								Chastity
 							</td>
 							<td class="Limit">
-								<input type="radio" name="Chast" value="1">
+								<input type="radio" name="Chast" value=1>
 							</td>
 							<td class="Dislike">
-								<input type="radio" name="Chast" value="2">
+								<input type="radio" name="Chast" value=2>
 							</td>
 							<td class="Like">
-								<input type="radio" name="Chast" value="3">
+								<input type="radio" name="Chast" value=3>
 							</td>
 						</tr>
 						<tr>
@@ -179,13 +180,13 @@
 								Cum Eating
 							</td>
 							<td class="Limit">
-								<input type="radio" name="cEat" value="1">
+								<input type="radio" name="cEat" value=1>
 							</td>
 							<td class="Dislike">
-								<input type="radio" name="cEat" value="2">
+								<input type="radio" name="cEat" value=2>
 							</td>
 							<td class="Like">
-								<input type="radio" name="cEat" value="3">
+								<input type="radio" name="cEat" value=3>
 							</td>
 						</tr>
 						<tr>
@@ -193,13 +194,13 @@
 								Feminisation
 							</td>
 							<td class="Limit">
-								<input type="radio" name="Fem" value="1">
+								<input type="radio" name="Fem" value=1>
 							</td>
 							<td class="Dislike">
-								<input type="radio" name="Fem" value="2">
+								<input type="radio" name="Fem" value=2>
 							</td>
 							<td class="Like">
-								<input type="radio" name="Fem" value="3">
+								<input type="radio" name="Fem" value=3>
 							</td>
 						</tr>
 						<tr>
@@ -207,13 +208,13 @@
 								Crossdressing
 							</td>
 							<td class="Limit">
-								<input type="radio" name="xDress" value="1">
+								<input type="radio" name="xDress" value=1>
 							</td>
 							<td class="Dislike">
-								<input type="radio" name="xDress" value="2">
+								<input type="radio" name="xDress" value=2>
 							</td>
 							<td class="Like">
-								<input type="radio" name="xDress" value="3">
+								<input type="radio" name="xDress" value=3>
 							</td>
 						</tr>
 						<tr>
@@ -221,13 +222,13 @@
 								Post Orgasm Torment
 							</td>
 							<td class="Limit">
-								<input type="radio" name="POT" value="1">
+								<input type="radio" name="POT" value=1>
 							</td>
 							<td class="Dislike">
-								<input type="radio" name="POT" value="2">
+								<input type="radio" name="POT" value=2>
 							</td>
 							<td class="Like">
-								<input type="radio" name="POT" value="3">
+								<input type="radio" name="POT" value=3>
 							</td>
 						</tr>
 					</table>
@@ -263,10 +264,10 @@
 								Inflatable butt plug
 							</td>
 							<td class="Have">
-								<input type="radio" name="IBP" value="0">
+								<input type="radio" name="IBP" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="IBP" value="1">
+								<input type="radio" name="IBP" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -274,10 +275,10 @@
 								Small butt plug
 							</td>
 							<td class="Have">
-								<input type="radio" name="SBP" value="0">
+								<input type="radio" name="SBP" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="SBP" value="1">
+								<input type="radio" name="SBP" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -285,10 +286,10 @@
 								Medium butt plug
 							</td>
 							<td class="Have">
-								<input type="radio" name="MBP" value="0">
+								<input type="radio" name="MBP" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="MBP" value="1">
+								<input type="radio" name="MBP" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -296,10 +297,10 @@
 								Large butt plug
 							</td>
 							<td class="Have">
-								<input type="radio" name="LBP" value="0">
+								<input type="radio" name="LBP" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="LBP" value="1">
+								<input type="radio" name="LBP" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -307,10 +308,10 @@
 								Anal beads
 							</td>
 							<td class="Have">
-								<input type="radio" name="AB" value="0">
+								<input type="radio" name="AB" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="AB" value="1">
+								<input type="radio" name="AB" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -318,10 +319,10 @@
 								Douche/enema kit
 							</td>
 							<td class="Have">
-								<input type="radio" name="Enema" value="0">
+								<input type="radio" name="Enema" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="Enema" value="1">
+								<input type="radio" name="Enema" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -338,10 +339,10 @@
 								Thin/small dildo
 							</td>
 							<td class="Have">
-								<input type="radio" name="SDil" value="0">
+								<input type="radio" name="SDil" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="SDil" value="1">
+								<input type="radio" name="SDil" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -349,10 +350,10 @@
 								Medium dildo
 							</td>
 							<td class="Have">
-								<input type="radio" name="MDil" value="0">
+								<input type="radio" name="MDil" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="MDil" value="1">
+								<input type="radio" name="MDil" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -360,10 +361,10 @@
 								Large dildo
 							</td>
 							<td class="Have">
-								<input type="radio" name="LDil" value="0">
+								<input type="radio" name="LDil" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="LDil" value="1">
+								<input type="radio" name="LDil" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -380,10 +381,10 @@
 								Clothes pegs/pins
 							</td>
 							<td class="Have">
-								<input type="radio" name="Peg" value="0">
+								<input type="radio" name="Peg" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="Peg" value="1">
+								<input type="radio" name="Peg" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -391,10 +392,10 @@
 								Tweezer clamps
 							</td>
 							<td class="Have">
-								<input type="radio" name="Tweez" value="0">
+								<input type="radio" name="Tweez" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="Tweez" value="1">
+								<input type="radio" name="Tweez" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -402,10 +403,10 @@
 								Clover clamps
 							</td>
 							<td class="Have">
-								<input type="radio" name="Clover" value="0">
+								<input type="radio" name="Clover" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="Clover" value="1">
+								<input type="radio" name="Clover" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -422,10 +423,10 @@
 								Ball gag
 							</td>
 							<td class="Have">
-								<input type="radio" name="BallG" value="0">
+								<input type="radio" name="BallG" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="BallG" value="1">
+								<input type="radio" name="BallG" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -433,10 +434,10 @@
 								Bit gag
 							</td>
 							<td class="Have">
-								<input type="radio" name="BitG" value="0">
+								<input type="radio" name="BitG" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="BitG" value="1">
+								<input type="radio" name="BitG" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -444,10 +445,10 @@
 								Butterfly gag
 							</td>
 							<td class="Have">
-								<input type="radio" name="BttG" value="0">
+								<input type="radio" name="BttG" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="BttG" value="1">
+								<input type="radio" name="BttG" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -455,10 +456,10 @@
 								Inflatable gag
 							</td>
 							<td class="Have">
-								<input type="radio" name="InfG" value="0">
+								<input type="radio" name="InfG" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="InfG" value="1">
+								<input type="radio" name="InfG" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -466,10 +467,10 @@
 								Pecker gag
 							</td>
 							<td class="Have">
-								<input type="radio" name="PeckG" value="0">
+								<input type="radio" name="PeckG" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="PeckG" value="1">
+								<input type="radio" name="PeckG" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -486,10 +487,10 @@
 								Chastity belt
 							</td>
 							<td class="Have">
-								<input type="radio" name="CBelt" value="0">
+								<input type="radio" name="CBelt" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="CBelt" value="1">
+								<input type="radio" name="CBelt" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -497,10 +498,10 @@
 								Chastity bra
 							</td>
 							<td class="Have">
-								<input type="radio" name="CBra" value="0">
+								<input type="radio" name="CBra" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="CBra" value="1">
+								<input type="radio" name="CBra" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -508,10 +509,10 @@
 								Thigh cuffs
 							</td>
 							<td class="Have">
-								<input type="radio" name="CThigh" value="0">
+								<input type="radio" name="CThigh" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="CThigh" value="1">
+								<input type="radio" name="CThigh" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -528,10 +529,10 @@
 								Rope
 							</td>
 							<td class="Have">
-								<input type="radio" name="Rope" value="0">
+								<input type="radio" name="Rope" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="Rope" value="1">
+								<input type="radio" name="Rope" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -539,10 +540,10 @@
 								Wrist cuffs
 							</td>
 							<td class="Have">
-								<input type="radio" name="WCuffs" value="0">
+								<input type="radio" name="WCuffs" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="WCuffs" value="1">
+								<input type="radio" name="WCuffs" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -550,10 +551,10 @@
 								Ankle cuffs
 							</td>
 							<td class="Have">
-								<input type="radio" name="ACuffs" value="0">
+								<input type="radio" name="ACuffs" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="ACuffs" value="1">
+								<input type="radio" name="ACuffs" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -561,10 +562,10 @@
 								Collar
 							</td>
 							<td class="Have">
-								<input type="radio" name="Collar" value="0">
+								<input type="radio" name="Collar" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="Collar" value="1">
+								<input type="radio" name="Collar" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -572,10 +573,10 @@
 								Arm binder
 							</td>
 							<td class="Have">
-								<input type="radio" name="ABind" value="0">
+								<input type="radio" name="ABind" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="ABind" value="1">
+								<input type="radio" name="ABind" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -583,10 +584,10 @@
 								Blindfold
 							</td>
 							<td class="Have">
-								<input type="radio" name="BFold" value="0">
+								<input type="radio" name="BFold" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="BFold" value="1">
+								<input type="radio" name="BFold" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -603,10 +604,10 @@
 								Paddle
 							</td>
 							<td class="Have">
-								<input type="radio" name="Paddle" value="0">
+								<input type="radio" name="Paddle" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="Paddle" value="1">
+								<input type="radio" name="Paddle" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -614,10 +615,10 @@
 								Wooden spoon
 							</td>
 							<td class="Have">
-								<input type="radio" name="WSpoon" value="0">
+								<input type="radio" name="WSpoon" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="WSpoon" value="1">
+								<input type="radio" name="WSpoon" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -625,10 +626,10 @@
 								Whip
 							</td>
 							<td class="Have">
-								<input type="radio" name="Whip" value="0">
+								<input type="radio" name="Whip" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="Whip" value="1">
+								<input type="radio" name="Whip" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -636,10 +637,10 @@
 								Belt
 							</td>
 							<td class="Have">
-								<input type="radio" name="Belt" value="0">
+								<input type="radio" name="Belt" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="Belt" value="1">
+								<input type="radio" name="Belt" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -656,10 +657,10 @@
 								Boxers
 							</td>
 							<td class="Have">
-								<input type="radio" name="MBoxers" value="0">
+								<input type="radio" name="MBoxers" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="MBoxers" value="1">
+								<input type="radio" name="MBoxers" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -667,10 +668,10 @@
 								Briefs
 							</td>
 							<td class="Have">
-								<input type="radio" name="MBriefs" value="0">
+								<input type="radio" name="MBriefs" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="MBriefs" value="1">
+								<input type="radio" name="MBriefs" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -678,10 +679,10 @@
 								Thong
 							</td>
 							<td class="Have">
-								<input type="radio" name="MThong" value="0">
+								<input type="radio" name="MThong" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="MThong" value="1">
+								<input type="radio" name="MThong" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -689,10 +690,10 @@
 								Shirt
 							</td>
 							<td class="Have">
-								<input type="radio" name="MShirt" value="0">
+								<input type="radio" name="MShirt" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="MShirt" value="1">
+								<input type="radio" name="MShirt" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -700,10 +701,10 @@
 								Trousers
 							</td>
 							<td class="Have">
-								<input type="radio" name="MTrousers" value="0">
+								<input type="radio" name="MTrousers" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="MTrousers" value="1">
+								<input type="radio" name="MTrousers" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -711,10 +712,10 @@
 								Shorts
 							</td>
 							<td class="Have">
-								<input type="radio" name="MShorts" value="0">
+								<input type="radio" name="MShorts" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="MShorts" value="1">
+								<input type="radio" name="MShorts" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -731,10 +732,10 @@
 								Panties
 							</td>
 							<td class="Have">
-								<input type="radio" name="FPanties" value="0">
+								<input type="radio" name="FPanties" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="FPanties" value="1">
+								<input type="radio" name="FPanties" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -742,10 +743,10 @@
 								Thong
 							</td>
 							<td class="Have">
-								<input type="radio" name="FThong" value="0">
+								<input type="radio" name="FThong" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="FThong" value="1">
+								<input type="radio" name="FThong" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -753,10 +754,10 @@
 								Boxers
 							</td>
 							<td class="Have">
-								<input type="radio" name="FBoxers" value="0">
+								<input type="radio" name="FBoxers" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="FBoxers" value="1">
+								<input type="radio" name="FBoxers" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -764,10 +765,10 @@
 								Blouse
 							</td>
 							<td class="Have">
-								<input type="radio" name="FBlouse" value="0">
+								<input type="radio" name="FBlouse" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="FBlouse" value="1">
+								<input type="radio" name="FBlouse" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -775,10 +776,10 @@
 								Skirt
 							</td>
 							<td class="Have">
-								<input type="radio" name="FSkirt" value="0">
+								<input type="radio" name="FSkirt" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="FSkirt" value="1">
+								<input type="radio" name="FSkirt" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -786,10 +787,10 @@
 								Dress
 							</td>
 							<td class="Have">
-								<input type="radio" name="FDress" value="0">
+								<input type="radio" name="FDress" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="FDress" value="1">
+								<input type="radio" name="FDress" value=1>
 							</td>
 						</tr>
 						<tr>
@@ -797,10 +798,10 @@
 								Tights/stockings
 							</td>
 							<td class="Have">
-								<input type="radio" name="FTights" value="0">
+								<input type="radio" name="FTights" value=0>
 							</td>
 							<td class="NotGot">
-								<input type="radio" name="FTights" value="1">
+								<input type="radio" name="FTights" value=1>
 							</td>
 						</tr>
 					</table>
@@ -823,15 +824,15 @@
 					*Some input here* <br><br>
 					
 					Personality
-					Strict <input type="radio" name="persona" value="3">
-					OK <input type="radio" name="persona" value="2">
-					Lenient <input type="radio" name="persona" value="1"> <br> <br>
+					Strict <input type="radio" name="persona" value=3>
+					OK <input type="radio" name="persona" value=2>
+					Lenient <input type="radio" name="persona" value=1> <br> <br>
 					
 					Impulsiveness <br>
 					Extremely <input type="radio" name="Impulsive" value="4">
-					Very <input type="radio" name="Impulsive" value="3">
-					Sort of <input type="radio" name="Impulsive" value="2">
-					Not at all <input type="radio" name="Impulsive" value="1"> <br> <br>
+					Very <input type="radio" name="Impulsive" value=3>
+					Sort of <input type="radio" name="Impulsive" value=2>
+					Not at all <input type="radio" name="Impulsive" value=1> <br> <br>
 					
 					<input type="submit">
 				</form>

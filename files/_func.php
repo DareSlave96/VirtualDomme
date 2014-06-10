@@ -1,6 +1,11 @@
 <?php
 	error_reporting(E_ALL ^ E_NOTICE);													// Stop error messages
 	
+	/******************************************************
+		Remind me to add the function to delay headers
+				being sent or add it for me :D
+	*******************************************************/
+	
 	if(empty($_SERVER['DOCUMENT_ROOT'])){$_SERVER['DOCUMENT_ROOT'] = dirname(dirname(__FILE__));}
 	define('ROOT', $_SERVER["DOCUMENT_ROOT"] . DIRECTORY_SEPARATOR); // DEFINE FULL PATH TO ROOT
 	
@@ -128,23 +133,45 @@
 		}
 		// Reset points
 		public static function reset (){
-		
+			
 		}
 		// Delete acount
 		public static function delete (){
-		
+			
 		}
 		// Add/change email
 		public static function email (){
-		
+			
 		}
 		// Add/change name
 		public static function name (){
-		
+			
 		}
 		// Change limits
 		public static function limits (){
-		
+			if ( isset( $_COOKIE['ID'] ) ){
+				echo "I'm doing it for ya!";
+				$db = DBCon();
+				$st = $db -> prepare("UPDATE `Details2` SET `Piss` = :piss, `Scat` = :scat, `Blood` = :blood, `oPublic` = :oPub, `hPublic` = :hPub, `Humiliation` = :humiliation, `Chastity` = :chastity, `cEating` = :cEat, `Anal` = :anal, `Feminisation` = :femme, `xDressing` = :xdress, `POT` = :pot WHERE `UN` = ':UN'");
+				$st -> bindparam( ':piss',$_POST['Piss'] );
+				$st -> bindparam( ':scat',$_POST['Scat'] );
+				$st -> bindparam( ':blood',$_POST['Blood'] );
+				$st -> bindparam( ':oPub',$_POST['oPub'] );
+				$st -> bindparam( ':hPub',$_POST['hPub'] );
+				$st -> bindparam( ':humiliation',$_POST['Humil'] );
+				$st -> bindparam( ':chastity',$_POST['Chast'] );
+				$st -> bindparam( ':cEat',$_POST['cEat'] );
+				$st -> bindparam( ':anal',$_POST['Anal'] );
+				$st -> bindparam( ':femme',$_POST['Fem'] );
+				$st -> bindparam( ':xdress',$_POST['xDress'] );
+				$st -> bindparam( ':pot',$_POST['POT'] );
+				$st -> bindparam( ':UN', $_COOKIE['ID'] );
+				$st -> execute();
+			}
+			else {
+				return false;
+				echo "Oops, you're not logged in";
+			}
 		}
 	}
 	// Punishment stuff
