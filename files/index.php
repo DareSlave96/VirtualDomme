@@ -16,13 +16,14 @@ re: yep, just messes up css atm, so ill leave it commented out for now :)
 			Home - Virtual Dom(me)
 		</title>
 		
-		<script type="text/javascript" src="/js/jquery.js"></script>
-		<script type="text/javascript" src="/js/jquery_setup.js"></script>
-	        <script type="text/javascript" src="/js/pages.js"></script>
-	        <script type="text/javascript" src="/js/main.js"></script>
-	        <script type="text/javascript" src="js/jquery_ui.js"></script>
-	        <link rel="stylesheet" type="text/css" href="/css/jquery_ui.css">
-	        <link rel="stylesheet" type="text/css" href="/css/main.css">
+	        <script type="text/javascript" src="assets/js/jquery.js"></script>
+		<script type="text/javascript" src="assets/js/jquery_setup.js"></script>
+	        <script type="text/javascript" src="assets/js/pages.js"></script>
+	        <script type="text/javascript" src="assets/js/main.js"></script>
+	        <script type="text/javascript" src="assets/js/jquery_ui.js"></script>
+	        <!-- phpdesktop and posible others dont handle .htaccess properly... so full path for now
+	        jquery ui css missing, will be added in future release
+	        -->
 			
 	</head>
 	<body>
@@ -40,8 +41,15 @@ re: yep, just messes up css atm, so ill leave it commented out for now :)
 			<div id="Quote"><span class="qte">"</span><?php echo quote::fetch(); ?><span class="qte">"</span><br></div>
 		</div>
 		<div id="body">
-			<h4>News</h4>
-			<?php echo news::get(); ?>
+			<!-- <h4>News</h4>
+			<?php echo news::get(); ?> -->
+	                <div id="home_page" style="display:none"></div>
+	                <div id="tasks_page" style="display:none"></div>
+	                <div id="punishments_page" style="display:none"></div>
+	                <div id="rewards_page" style="display:none"></div>
+	                <div id="sessions_page" style="display:none"></div>
+	                <!-- Above divs get loaded from corresponding ajax files in ajax folder -->
+	                <div id="loading" style="display:none"><img src='img/loading.gif' width="60" height="60" /></div>
 		</div>
 	</body>
 </html>
