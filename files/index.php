@@ -31,6 +31,7 @@ re: yep, just messes up css atm, so ill leave it commented out for now :)
 			<h1>Virtual Dom(me)</h1>
 		</div>
 		<div id="menu">
+			You wont see this text here because the menu div gets replaced with /pages/menu.php
 			<b><u>Menu</u></b><br>
 			<?php echo GetMenu(); ?>
 		</div>
