@@ -72,3 +72,72 @@ $(document).on("click",".lbutton2div",function(){
 	
   return false;
 });
+
+
+// SAVEBUTTON
+$(document).on("click",".savebutton",function(){
+	
+	var button_name = $(this).attr("name"); // for loading_ and saved_	
+	phptarget = $(this).attr("alt"); // for scripts that resive the post.... ex: if $_POST['phptarget'] == X
+	var form = this.form;	
+	var form_id = $(form).attr("id");
+	
+	var data = $(form).serialize(); // serialize form data... target script can get this in $_POST[]
+	$("#loading_"+button_name).fadeIn("slow");	
+	var target = $('#'+form_id+' input[name=target]').val(); //take target from hidden form field called target
+	
+	post2ajax(target,data,button_name,phptarget);
+	
+return false;
+});	
+
+// POST2AJAX
+function post2ajax(target,post_data,button_name,phptarget){
+	//alert("tar="+target+" - p2a="+post_data);
+	$("#saved_"+button_name).removeClass();		
+	post_data += "&phptarget=" + encodeURIComponent(phptarget); 
+	$.ajax({
+		type: "POST",
+		url: "/ajax/"+target+".php",
+		timeout: 25000,
+		cache: false,
+		data: post_data,
+		success: function(response){ //OK|message
+			$("#loading_"+button_name).fadeOut("slow");
+			var response_data = response.split('|');
+			var response_msg = response_data[1];	
+			if(response_data[0] == "OK" || response_data[0] == "RELOAD"){
+				$("#saved_"+button_name).addClass('green');
+				$("#saved_"+button_name).text(response_msg);
+				$("#saved_"+button_name).fadeIn("slow").delay(5000).fadeOut("slow");
+			}else{
+				$("#saved_"+button_name).addClass('red');
+				$("#saved_"+button_name).text(response_msg);
+				$("#saved_"+button_name).fadeIn("slow");
+			}			
+			
+			if(response_data[0] == "RELOAD"){			
+				var reload_type = response_data[2];
+				var reload_target = response_data[3];
+				var reload_div = response_data[4];
+				var reload_get = response_data[5];
+				loadedfbuttons = [];
+				
+				if(reload_type == "page"){
+					//loadpagediv("/ajax/card.php","#card_page");
+					loadpagediv("/ajax/"+reload_target+".php","#"+reload_div);
+				}else if(reload_type == "div"){
+					// load2div("card_edit","#edit16_div","?card_id=16")
+					load2div(reload_target,"#"+reload_div,"?"+reload_get)
+				}			
+			}
+		error: function(x, t, m){
+			//alert(x+" - "+t+" - "+m);
+			$("#loading_"+button_name).fadeOut("slow");
+			$("#saved_"+button_name).addClass('red');
+			$("#saved_"+button_name).text('Failed to connect, please try again');
+			//$("#saved_"+button_name).fadeIn("slow").delay(5000).fadeOut("slow");
+			$("#saved_"+button_name).fadeIn("slow");
+		}
+	});
+}
