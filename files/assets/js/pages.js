@@ -6,11 +6,12 @@ $(document).ready(function(){
 	var page = window.location.hash;
 	if(!page){page = "#home";}	
 	loadmenu(page);
-	
-	// SET MENU CLICKS	
-	$('#menu a').on('click', function(event){
-		loadpage(this.hash);
-  	}); 
+});
+
+// MAIN MENU CLICKS (pagebtn class)
+$(document).on("click",".pagebtn",function(){	
+	loadpage(this.hash);
+	return false;
 });
 
 // LOAD MENU
@@ -50,8 +51,9 @@ $(document).on("click","#reloadpage",function(){
 });
 
 // LOADPAGE
-function loadpage(page){	
-	if(page != lastpage){ //change page	
+function loadpage(page){
+	// part of code disabled to disable caching
+//if(page != lastpage){ //change page	
 		if(lastpage != ""){			
 			$('#menu a[href="'+lastpage+'"]').removeClass('active');
 			$(lastpage+"_page").slideUp("slow");	
@@ -59,11 +61,11 @@ function loadpage(page){
 		$('#menu a[href="'+page+'"]').addClass('active');				
 		lastpage = page;
 		var pagename = page.substr(1);
-		if(loadedpages.indexOf(pagename) == -1){ 		
-			loadedpages.push(pagename);
+		//if(loadedpages.indexOf(pagename) == -1){ 		
+			//loadedpages.push(pagename);
 			loadpagediv("/pages/"+pagename+".php",page+"_page");	
-		}else{$(page+"_page").slideDown("slow");}		
-	}
+		//}else{$(page+"_page").slideDown("slow");}		
+//	}
 }
 
 // LOADPAGEDIV
