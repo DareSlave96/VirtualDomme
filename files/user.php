@@ -858,15 +858,19 @@
 			
 			$("#Limits").click(function(){
 			  $("#Lmt").toggle(500);
+			  return false; // prevent default link behavior
 			});
 			$("#Items").click(function(){
 			  $("#Itm").toggle(500);
+			  return false;
 			});
 			$("#Domme").click(function(){
 			  $("#Dom").toggle(500);
+			  return false;
 			});
 			$("#Account").click(function(){
 			  $("#Act").toggle(500);
+			  return false;
 			});
 		</script>
 	</body>
