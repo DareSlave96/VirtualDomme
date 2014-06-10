@@ -18,7 +18,7 @@ function loadmenu(page){
 	$("#menu").html('<img src="img/loading.gif" width="25" height="25" />');	
 	$.ajax({
 		type: "GET",
-		url: "/ajax/menu.php",
+		url: "/pages/menu.php",
 		timeout: 25000,
 		cache: false,
 		success: function(data){ 
@@ -46,7 +46,7 @@ $(document).on("click","#reloadpage",function(){
 	var page = $(this).attr("href");
 	var pagename = page.substr(1);
 	loadedfbuttons = []; //clear loaded button divs
-	loadpagediv("/ajax/"+pagename+".php",page+"_page");	
+	loadpagediv("/pages/"+pagename+".php",page+"_page");	
 });
 
 // LOADPAGE
@@ -61,7 +61,7 @@ function loadpage(page){
 		var pagename = page.substr(1);
 		if(loadedpages.indexOf(pagename) == -1){ 		
 			loadedpages.push(pagename);
-			loadpagediv("/ajax/"+pagename+".php",page+"_page");	
+			loadpagediv("/pages/"+pagename+".php",page+"_page");	
 		}else{$(page+"_page").slideDown("slow");}		
 	}
 }
