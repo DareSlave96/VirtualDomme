@@ -27,7 +27,7 @@
 		<title>
 			Account Management - Virtual Dom(me)
 		</title>
-		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.js"></script>
 	</head>
 	<body>
 		<div id="head">
