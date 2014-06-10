@@ -49,6 +49,7 @@ re: yep, just messes up css atm, so ill leave it commented out for now :)
 	                <div id="punishments_page" style="display:none"></div>
 	                <div id="rewards_page" style="display:none"></div>
 	                <div id="sessions_page" style="display:none"></div>
+	                <div id="details_page" style="display:none"></div>
 	                <!-- Above divs get loaded from corresponding ajax files in pages folder -->
 	                <div id="loading" style="display:none"><img src='img/loading.gif' width="60" height="60" /></div>
 		</div>
