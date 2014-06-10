@@ -1,6 +1,9 @@
 <?php
 	error_reporting(E_ALL ^ E_NOTICE);													// Stop error messages
 	
+	if(empty($_SERVER['DOCUMENT_ROOT'])){$_SERVER['DOCUMENT_ROOT'] = dirname(dirname(__FILE__));}
+	define('ROOT', $_SERVER["DOCUMENT_ROOT"] . DIRECTORY_SEPARATOR); // DEFINE FULL PATH TO ROOT
+	
 	if ( isset( $_COOKIE['ID'] ) && $_GET['do'] != "lo" ){														// Renew cookies on each page visit
 		setcookie( "ID", $_COOKIE['ID'], time() + 3600 );
 		setcookie( "PP", $_COOKIE['PP'], time() + 3600 );
@@ -16,7 +19,8 @@
 	}
 	
 	function DBCon (){																	// DB connection
-		return new PDO('sqlite:_DB.sqlite');
+		//return new PDO('sqlite:_DB.sqlite');
+		return new PDO('sqlite:'.ROOT.'_DB.sqlite');
 	}
 	
 	function GetMenu (){
