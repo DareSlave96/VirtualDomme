@@ -4,6 +4,15 @@
 	/******************************************************
 		Remind me to add the function to delay headers
 				being sent or add it for me :D
+				
+				You mean output buffering?
+				(what i usualy use is the view function, wish should be in the core
+				i do all php stuff... then store needed data in a array... that then trows
+				it in the view/template file.... right before that you could set the headers
+				and or generate a cache file etc... 
+				Doing this does imply some changes to the current code do)
+				
+				Or you simply mean redirect after x seconds?
 	*******************************************************/
 	
 	if(empty($_SERVER['DOCUMENT_ROOT'])){$_SERVER['DOCUMENT_ROOT'] = dirname(dirname(__FILE__));}
