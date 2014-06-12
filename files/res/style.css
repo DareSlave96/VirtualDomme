@@ -26,7 +26,7 @@ div#head2 {
 	width: 750px;
 	height: 125px;
 }
-div#pun {
+div#pun, .pun {
 	padding: 0px;
 	background-color: black;
 	color: white;
@@ -34,7 +34,7 @@ div#pun {
 	margin-left: 25px;
 	position: absolute;
 }
-div#rew {
+div#rew, .rew {
 	padding: 0px;
 	background-color: black;
 	color: white;
@@ -42,7 +42,7 @@ div#rew {
 	margin-left: 275px;
 	position: absolute;
 }
-div#tas {
+div#tas, .tas {
 	padding: 0px;
 	background-color: black;
 	color: white;
@@ -50,7 +50,7 @@ div#tas {
 	margin-left: 525px;
 	position: absolute;
 }
-div#Quote {
+div#Quote, .quote {
 	padding: 0px;
 	position: absolute;
 	width: 750px;
