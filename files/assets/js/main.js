@@ -79,14 +79,15 @@ $(document).on("click",".savebutton",function(){
 	
 	var button_name = $(this).attr("name"); // for loading_ and saved_	
 	phptarget = $(this).attr("alt"); // for scripts that resive the post.... ex: if $_POST['phptarget'] == X
-	var form = this.form;	
+	
+	var form = this.form; // just usfull for further code
 	var form_id = $(form).attr("id");
 	
 	var data = $(form).serialize(); // serialize form data... target script can get this in $_POST[]
 	$("#loading_"+button_name).fadeIn("slow");	
-	var target = $('#'+form_id+' input[name=target]').val(); //take target from hidden form field called target
+	var target = $('#'+form_id+' input[name=target]').val(); //take target from hidden form field called target (ajax/target.php)
 	
-	post2ajax(target,data,button_name,phptarget);
+	post2ajax(target,data,button_name,phptarget); // send to post function
 	
 return false;
 });	
