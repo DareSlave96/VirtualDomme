@@ -131,6 +131,7 @@ function post2ajax(target,post_data,button_name,phptarget){
 					load2div(reload_target,"#"+reload_div,"?"+reload_get)
 				}			
 			}
+		},
 		error: function(x, t, m){
 			//alert(x+" - "+t+" - "+m);
 			$("#loading_"+button_name).fadeOut("slow");
