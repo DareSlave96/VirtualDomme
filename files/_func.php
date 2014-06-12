@@ -251,7 +251,7 @@
 			$st -> bindparam( ':ID', $_COOKIE['ID']);
 			$st -> execute();
 			setcookie( 'PP', $_COOKIE['PP'] - $pnts, time()+3600 );
-			header('Location: punishments.php');
+			//header('Location: punishments.php'); // not needed with ajax, and breaks ajax
 		}
 		// Get random punishment
 		public static function random (){
@@ -265,10 +265,14 @@
 				$auth =  $row['Author'];
 				$points = $row['Points'];
 			}		
+			
 			echo "	$punishment <br>
 					<b> $auth </b><br>
 					<span class='big'> $points </span><br>
-					<a href='punishments.php?ID=$ID&comp=0'>Done</a> | <a href='punishments.php?ID=$ID&Comp=1'>Failed</a><br>";
+					<a href='punishments.php?ID=$ID&comp=0'>Done</a> | <a href='punishments.php?ID=$ID&Comp=1'>Failed</a><br>
+					
+					<a href='#pun_points' id='load-points-type=pun&ID=$ID&comp=0' class='lbutton2div'>aj Done</a> | 
+					<a  href='#pun_points' id='load-points-type=pun&ID=$ID&comp=1' class='lbutton2div'>aj Failed</a><br>";
 		}
 		// Get punishment based on points (Not used)
 		public static function fetch (){
@@ -319,7 +323,7 @@
 				$st -> execute();
 				setcookie( "RP", $_COOKIE['RP'] - $pnt , time() + 3600 );
 			}
-			header('Location: rewards.php');
+			//header('Location: rewards.php'); // not needed with ajax, and breaks ajax
 		}
 		// Get random reward
 		public static function random (){
@@ -336,7 +340,10 @@
 			echo "	$reward <br>
 					<b> $auth </b><br>
 					<span class='big'> $points </span><br>
-					<a href='rewards.php?ID=$ID&comp=True'>Completed</a> | <a href='rewards.php?ID=$ID&comp=False'>Skip</a>";
+					<a href='rewards.php?ID=$ID&comp=True'>Completed</a> | <a href='rewards.php?ID=$ID&comp=False'>Skip</a><br>
+					
+					<a href='#rew_points' id='load-points-type=rew&ID=$ID&comp=True' class='lbutton2div'>aj Completed</a> | 
+					<a  href='#rew_points' id='load-points-type=rew&ID=$ID&comp=False' class='lbutton2div'>aj Skip</a><br>";
 		}
 		// Get reward based on points (Not used)
 		public static function fetch (){
@@ -389,7 +396,7 @@
 			$st -> bindparam( ':pnt', $pnts);
 			$st -> execute();
 			setcookie( 'TP', $_COOKIE['TP'] - $pnts, time()+3600 );
-			header('Location: tasks.php');
+			//header('Location: tasks.php'); // not needed with ajax, and breaks ajax
 		}
 		// Get random task
 		public static function random (){
@@ -406,7 +413,10 @@
 			echo "	$task <br>
 					<b> $auth </b><br>
 					<span class='big'> $points </span><br>
-					<a href='tasks.php?ID=$ID&comp=0'>Completed</a> | <a href='tasks.php?ID=$ID&comp=1'>Failed</a>";
+					<a href='tasks.php?ID=$ID&comp=0'>Completed</a> | <a href='tasks.php?ID=$ID&comp=1'>Failed</a><br>
+					
+					<a href='#tas_points' id='load-points-type=tas&ID=$ID&comp=0' class='lbutton2div'>aj Completed</a> | 
+					<a  href='#tas_points' id='load-points-type=tas&ID=$ID&comp=1' class='lbutton2div'>aj Failed</a><br>";
 		}
 		// Get task based on points (Not used)
 		public static function fetch (){
