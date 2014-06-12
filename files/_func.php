@@ -161,11 +161,11 @@
 				
 				$query = "UPDATE `Details2` SET ";
 				
-				end($_POST[]);
-				$lastkey = key($_POST[]); // get last element
-				reset($_POST[]); // set pointer to first
+				end($_POST);
+				$lastkey = key($_POST); // get last element
+				reset($_POST); // set pointer to first
 				
-				foreach($_POST[] as $key => $value){ //build query					
+				foreach($_POST as $key => $value){ //build query					
 					if($key == $lastkey){
 						$query .= "'".$key."' = :".$key;
 					}else{
@@ -176,7 +176,7 @@
 				$query .= " WHERE `UN` = ':UN'";
 				$st = $db -> prepare($query); //finish query
 				
-				foreach($_POST[] as $key => $value){ // build binds
+				foreach($_POST as $key => $value){ // build binds
 					if(!isset($_POST[$key])){return "ERROR: KEY MISSING";} //return errors
 					$st -> bindparam( ':'.$key,$_POST[$key] );					
 				}
