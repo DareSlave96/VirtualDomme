@@ -6,7 +6,7 @@
 	$do = $_GET['do'];
 	if ( $do == "limits" ){
 		// Set limits
-		user::limits();
+		echo user::limits(); //return error or OK message
 	}
 	else if ( $do == "items" ){
 		// Set items
