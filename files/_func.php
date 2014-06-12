@@ -150,6 +150,45 @@
 		// Change limits
 		public static function limits (){
 			if ( isset( $_COOKIE['ID'] ) ){
+				
+				// what about doing it like this...
+				// no need to write the names, however the keys need to match the database names
+				
+				// NOTE: CODE NOT TESTED (should work do)
+				
+				echo "I'm doing it for ya!";
+				$db = DBCon();
+				
+				$query = "UPDATE `Details2` SET ";
+				
+				end($_POST[]);
+				$lastkey = key($_POST[]); // get last element
+				reset($_POST[]); // set pointer to first
+				
+				foreach($_POST[] as $key => $value){ //build query					
+					if($key == $lastkey){
+						$query .= "'".$key."' = :".$key;
+					}else{
+						$query .= "'".$key."' = :".$key.", ";
+					}					
+				}
+				
+				$query .= " WHERE `UN` = ':UN'";
+				$st = $db -> prepare($query); //finish query
+				
+				foreach($_POST[] as $key => $value){ // build binds
+					if(!isset($_POST[$key])){return "ERROR: KEY MISSING";} //return errors
+					$st -> bindparam( ':'.$key,$_POST[$key] );					
+				}
+				$st -> bindparam( ':UN', $_COOKIE['ID'] );
+				
+				if($st -> execute()){ // executre
+					return "OK";
+				}else{
+					return "ERROR: EXECUTE FAILED";	
+				}
+				
+				/*
 				echo "I'm doing it for ya!";
 				$db = DBCon();
 				$st = $db -> prepare("UPDATE `Details2` SET `Piss` = :piss, `Scat` = :scat, `Blood` = :blood, `oPublic` = :oPub, `hPublic` = :hPub, `Humiliation` = :humiliation, `Chastity` = :chastity, `cEating` = :cEat, `Anal` = :anal, `Feminisation` = :femme, `xDressing` = :xdress, `POT` = :pot WHERE `UN` = ':UN'");
@@ -167,6 +206,7 @@
 				$st -> bindparam( ':pot',$_POST['POT'] );
 				$st -> bindparam( ':UN', $_COOKIE['ID'] );
 				$st -> execute();
+				*/
 			}
 			else {
 				return false;
