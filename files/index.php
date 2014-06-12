@@ -36,10 +36,10 @@ re: yep, just messes up css atm, so ill leave it commented out for now :)
 			<?php echo GetMenu(); ?>
 		</div>
 		<div id="head2">
-			<div id="Pun"><b>Punishments</b><br><?php echo punishment::points(); ?></div>
-			<div id="Rew"><b>Rewards</b><br><?php echo reward::points(); ?></div>
-			<div id="Tas"><b>Tasks</b><br><?php echo task::points(); ?></div>
-			<div id="Quote"><span class="qte">"</span><?php echo quote::fetch(); ?><span class="qte">"</span><br></div>
+			<div id="pun_points_div" class="pun"><b>Punishments</b><br><?php echo punishment::points(); ?></div>
+			<div id="rew_points_div" class="rew"><b>Rewards</b><br><?php echo reward::points(); ?></div>
+			<div id="tas_points_div" class="tas"><b>Tasks</b><br><?php echo task::points(); ?></div>
+			<div id="quote_div" class="quote"><span class="qte">"</span><?php echo quote::fetch(); ?><span class="qte">"</span><br></div>
 		</div>
 		<div id="body">
 			<!-- <h4>News</h4>
